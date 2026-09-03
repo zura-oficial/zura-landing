@@ -87,18 +87,24 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    padding:150px 0 110px;
-    text-align:center;
     position:relative;
-    background-size:cover;
-    background-position:center 30%;
     overflow:hidden;
+    min-height:640px;
+  }
+  .hero .carousel{ position:absolute; inset:0; }
+  .hero .carousel-track{ height:100%; }
+  .carousel-slide{
+    width:100%; height:100%; flex-shrink:0;
+    background-size:cover; background-position:center 30%;
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
   }
   .hero .hero-overlay{
     position:absolute; inset:0;
     background: linear-gradient(180deg, rgba(30,30,30,0.5) 0%, rgba(30,30,30,0.8) 100%);
   }
-  .hero .hero-inner{ position:relative; z-index:2; }
+  .hero .hero-inner{ position:relative; z-index:2; padding:150px 20px 90px; }
   .hero h1, .hero .eyebrow{ color: var(--blanco); }
   .hero .script-line{ color: var(--beige); }
   .hero p.sub{ color: rgba(244,242,238,0.85); }
@@ -132,6 +138,82 @@
     font-size:15.5px; color: rgba(244,242,238,0.92); font-weight:300;
     text-shadow: 0 1px 10px rgba(0,0,0,0.5);
   }
+  .hero .tag-mom{
+    display:inline-block; font-size:12px; letter-spacing:0.12em; font-weight:600;
+    color: var(--negro); background: var(--beige);
+    padding:6px 14px; border-radius:20px; margin-bottom:18px;
+  }
+
+  /* ---------- SLIDE PROMOCIONAL (DÍA DE LA MADRE) ---------- */
+  .mom-slide{ text-align:left; align-items:stretch; }
+  .mom-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:40px; flex-wrap:wrap; height:100%; padding:60px 28px;
+  }
+  .mom-text{ flex:1 1 380px; max-width:480px; }
+  .mom-eyebrow{
+    font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase;
+    color:#8a5a44; margin-bottom:16px; font-weight:600;
+  }
+  .mom-title{
+    font-family:'Playfair Display', serif; font-weight:600; color:var(--negro);
+    font-size:clamp(30px,4.2vw,46px); line-height:1.15; margin-bottom:18px;
+  }
+  .mom-title .script{ font-family:'Allura', cursive; font-weight:400; font-size:1.2em; color:#8a5a44; }
+  .mom-sub{ font-size:14.5px; color:#5c5450; max-width:380px; margin-bottom:28px; line-height:1.55; }
+  .mom-btns{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px; }
+  .mom-btns .btn{ font-size:11px; padding:14px 22px; }
+  .mom-icons{ display:flex; gap:24px; flex-wrap:wrap; }
+  .mom-icons div{ font-size:11.5px; color:#5c5450; display:flex; align-items:center; gap:7px; }
+  .mom-photo{ position:relative; flex:1 1 300px; max-width:400px; }
+  .mom-photo img{ width:100%; border-radius:var(--radio); display:block; box-shadow:var(--sombra); }
+  .mom-badge{
+    position:absolute; bottom:-16px; right:-16px;
+    width:104px; height:104px; border-radius:50%;
+    background:var(--blanco); border:1px solid rgba(30,30,30,0.15);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-size:10px; letter-spacing:0.05em; color:var(--negro); text-transform:uppercase;
+    font-weight:600; line-height:1.6; padding:10px;
+  }
+  @media (max-width:760px){
+    .mom-inner{ flex-direction:column-reverse; text-align:center; padding:40px 24px; }
+    .mom-text{ text-align:center; }
+    .mom-sub{ margin-left:auto; margin-right:auto; }
+    .mom-btns, .mom-icons{ justify-content:center; }
+    .mom-photo{ max-width:220px; }
+  }
+
+  /* ---------- CARRUSEL GENÉRICO (hero y productos) ---------- */
+  .carousel{ position:relative; overflow:hidden; }
+  .carousel-track{
+    display:flex; height:100%;
+    transition: transform .45s ease;
+  }
+  .carousel-track > img{
+    width:100%; height:100%; flex-shrink:0; object-fit:cover; display:block;
+  }
+  .carousel-dots{
+    position:absolute; bottom:16px; left:50%; transform:translateX(-50%);
+    display:flex; gap:7px; z-index:4;
+  }
+  .carousel-dots button{
+    width:7px; height:7px; border-radius:50%; border:none; padding:0;
+    background:rgba(244,242,238,0.45); cursor:pointer; transition:background .2s, transform .2s;
+  }
+  .carousel-dots button.active{ background:var(--blanco); transform:scale(1.25); }
+  .carousel-arrow{
+    position:absolute; top:50%; transform:translateY(-50%);
+    width:32px; height:32px; border-radius:50%; border:none; cursor:pointer;
+    background:rgba(30,30,30,0.4); color:var(--blanco); font-size:17px; line-height:1;
+    display:flex; align-items:center; justify-content:center; z-index:4;
+  }
+  .carousel-arrow:hover{ background:rgba(30,30,30,0.65); }
+  .carousel-arrow.prev{ left:12px; }
+  .carousel-arrow.next{ right:12px; }
+  .carousel[data-count="1"] .carousel-dots,
+  .carousel[data-count="1"] .carousel-arrow{ display:none; }
+  .hcard .thumb .carousel{ position:absolute; inset:0; }
+  .hcard .thumb{ overflow:hidden; }
   .btn{
     display:inline-block;
     padding:15px 34px;
@@ -336,14 +418,46 @@
   </div>
 </nav>
 
-<header class="hero" style="background-image:url('images/img1.jpg');">
-  <div class="hero-overlay"></div>
-  <div class="wrap hero-inner">
-    <div class="z-badge">Z</div>
-    <h1>ZURA</h1>
-    <div class="script-line script">hecho para ti.</div>
-    <p class="sub">Zapatillas importadas de alta calidad, a un precio justo.</p>
-    <a class="btn" href="#disponible">Ver modelos disponibles</a>
+<header class="hero">
+  <div class="carousel hero-carousel" data-carousel data-autoplay="6000">
+    <div class="carousel-track">
+
+      <div class="carousel-slide" style="background-image:url('images/img1.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="wrap hero-inner">
+          <div class="z-badge">Z</div>
+          <h1>ZURA</h1>
+          <div class="script-line script">hecho para ti.</div>
+          <p class="sub">Envíos a todo el país · Descuento especial pagando por transferencia.</p>
+          <a class="btn" href="#disponible">Ver modelos disponibles</a>
+        </div>
+      </div>
+
+      <div class="carousel-slide mom-slide" style="background: linear-gradient(120deg, #f4e8e1 0%, #eeddd3 55%, #e7cdbb 100%);">
+        <div class="wrap mom-inner">
+          <div class="mom-text">
+            <div class="mom-eyebrow">18 octubre ♡ Día de la Madre</div>
+            <h2 class="mom-title">Una selección<br>para <span class="script">ella</span>.</h2>
+            <p class="mom-sub">Zapatillas de mujer seleccionadas para regalarle a mamá, con beneficios especiales.</p>
+            <div class="mom-btns">
+              <a class="btn" style="background:var(--negro); border-color:var(--negro);" href="#disponible">Ver selección</a>
+              <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20el%20cat%C3%A1logo%20completo%20para%20el%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Quiero el catálogo completo</a>
+            </div>
+            <div class="mom-icons">
+              <div>🚚 Envíos a todo el país</div>
+              <div>🎁 Beneficios especiales</div>
+              <div>📦 Stock limitado</div>
+            </div>
+          </div>
+          <div class="mom-photo">
+            <img src="images/mom_promo.jpg" alt="Selección de zapatillas de mujer para el Día de la Madre">
+            <div class="mom-badge">Para mamá ♡<br>para cada paso</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="carousel-dots"></div>
   </div>
 </header>
 
@@ -426,14 +540,21 @@
       <div class="card">
         <div class="thumb" style="padding:0; background:none;"><img src="images/img10.jpg" alt="Vans Hylane" style="width:100%; height:100%; object-fit:cover;"></div>
         <h3>Vans Hylane</h3>
+        <div class="talle">Talle: 39</div>
+        <div class="precios"><span class="ef">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane%20talle%2039" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/hylane_talle38.jpg" alt="Vans Hylane rosa" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Vans Hylane</h3>
         <div class="talle">Talle: 38</div>
         <div class="precios"><span class="ef">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane%20talle%2038" target="_blank" rel="noopener">Reservar por WhatsApp</a>
       </div>
       <div class="card">
         <div class="thumb" style="padding:0; background:none;"><img src="images/img11.jpg" alt="Nike Travis Scott" style="width:100%; height:100%; object-fit:cover;"></div>
         <h3>Nike Travis Scott</h3>
-        <div class="talle">Talle: 37</div>
+        <div class="talle">Talle: 41</div>
         <div class="precios"><span class="ef">$88.400 efectivo/transferencia</span><span class="tj">$114.400 (3 cuotas sin interés)</span></div>
         <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Travis%20Scott" target="_blank" rel="noopener">Reservar por WhatsApp</a>
       </div>
@@ -506,25 +627,53 @@
 <section id="preventa" class="preventa-bg">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Algunos de nuestros pares</h2>
+      <h2>Lo más vendido</h2>
       <p>Estos son solo algunos — tenemos +170 modelos más. Reservá el tuyo con el 30% y asegurá tu talle, o pedí el catálogo completo y elegí entre todos.</p>
     </div>
 
     <div class="hero-grid">
       <div class="hcard">
-        <div class="thumb" style="padding:0;"><span class="num">01</span><img src="images/img18.jpg" alt="Nike Dunk Low" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;"></div>
+        <div class="thumb" style="padding:0;">
+          <span class="num">01</span>
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/dunk_retro_1.jpg" alt="Nike Dunk Low Retro gris">
+              <img src="images/dunk_retro_2.jpg" alt="Nike Dunk Low Retro blanco y negro">
+              <img src="images/dunk_retro_3.jpg" alt="Nike Dunk Low Retro bordó">
+              <img src="images/dunk_retro_4.jpg" alt="Nike Dunk Low Retro azul marino">
+              <img src="images/dunk_retro_5.jpg" alt="Nike Dunk Low Retro blanco">
+              <img src="images/dunk_retro_6.jpg" alt="Nike Dunk Low Retro verde militar">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">‹</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">›</button>
+          </div>
+        </div>
         <div class="body">
-          <h3>Nike Dunk Low</h3>
+          <h3>Nike Dunk Low Retro</h3>
           <div class="tag script">ícono del streetwear</div>
           <p class="desc">Disponible en varios colorways, para combinar con todo.</p>
           <div class="precio-line"><span class="ef">$82.000 efectivo/transferencia</span> · $106.200 tarjeta (3 cuotas sin interés)</div>
           <div class="sena">Reservá con 30% — $24.600</div>
-          <a class="btn" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Dunk%20Low%2C%20%C2%BFqu%C3%A9%20talles%20ten%C3%A9s%20disponibles%3F" target="_blank" rel="noopener">Reservar mi par</a>
+          <a class="btn" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Dunk%20Low%20Retro%2C%20%C2%BFqu%C3%A9%20talles%20ten%C3%A9s%20disponibles%3F" target="_blank" rel="noopener">Reservar mi par</a>
         </div>
       </div>
 
       <div class="hcard">
-        <div class="thumb" style="padding:0;"><span class="num">02</span><img src="images/img19.jpg" alt="Vans Hylane" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;"></div>
+        <div class="thumb" style="padding:0;">
+          <span class="num">02</span>
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/img19.jpg" alt="Vans Hylane">
+              <img src="images/hylane_1.jpg" alt="Vans Hylane azul y gris">
+              <img src="images/hylane_2.jpg" alt="Vans Hylane marrón">
+              <img src="images/hylane_3.jpg" alt="Vans Hylane rosa">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">‹</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">›</button>
+          </div>
+        </div>
         <div class="body">
           <h3>Vans Hylane</h3>
           <div class="tag script">el clásico urbano</div>
@@ -627,6 +776,41 @@
   </div>
 </section>
 
+<section id="talles">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">¿No sabés tu talle?</div>
+      <h2>Guía de talles</h2>
+      <p>Equivalencia entre talle argentino, talle importado y largo de plantilla en centímetros.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%; max-width:640px; margin:0 auto; border-collapse:collapse; font-size:14px;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--negro);">
+            <th style="padding:12px 10px; text-align:left; font-family:'Playfair Display', serif; font-weight:600;">Argentina</th>
+            <th style="padding:12px 10px; text-align:left; font-family:'Playfair Display', serif; font-weight:600;">Importado</th>
+            <th style="padding:12px 10px; text-align:left; font-family:'Playfair Display', serif; font-weight:600;">Largo de plantilla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">35</td><td style="padding:10px;">34</td><td style="padding:10px;">23 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">36</td><td style="padding:10px;">35</td><td style="padding:10px;">23.5 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">37</td><td style="padding:10px;">36</td><td style="padding:10px;">24-24.5 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">38</td><td style="padding:10px;">37</td><td style="padding:10px;">25 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">39</td><td style="padding:10px;">38</td><td style="padding:10px;">25.5 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">40</td><td style="padding:10px;">39</td><td style="padding:10px;">26-26.5 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">41</td><td style="padding:10px;">40</td><td style="padding:10px;">27 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">42</td><td style="padding:10px;">41</td><td style="padding:10px;">27.5 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">43</td><td style="padding:10px;">42</td><td style="padding:10px;">28-29.5 cm</td></tr>
+          <tr style="border-bottom:1px solid var(--gris-linea);"><td style="padding:10px;">44</td><td style="padding:10px;">43</td><td style="padding:10px;">29 cm</td></tr>
+          <tr><td style="padding:10px;">45</td><td style="padding:10px;">44</td><td style="padding:10px;">29.5 cm</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center; font-size:12.5px; color:var(--gris); margin-top:18px;">⚠️ Medidas aproximadas. ¿Dudás entre dos talles? Escribinos con la medida exacta de tu pie.</p>
+  </div>
+</section>
+
 <section style="padding:0;">
   <div class="info-row">
     <div class="info-item"><div class="ic">💳</div><h4>Tarjeta</h4><p>Hasta 3 cuotas sin interés</p></div>
@@ -659,5 +843,63 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  function initCarousel(root){
+    var track = root.querySelector('.carousel-track');
+    if(!track) return;
+    var slides = Array.prototype.slice.call(track.children);
+    var count = slides.length;
+    root.setAttribute('data-count', count);
+    if(count <= 1) return;
+
+    var index = 0;
+    var dotsWrap = root.querySelector('.carousel-dots');
+    var dots = [];
+    if(dotsWrap){
+      slides.forEach(function(_, i){
+        var d = document.createElement('button');
+        d.setAttribute('aria-label', 'Ir a la imagen ' + (i+1));
+        if(i === 0) d.classList.add('active');
+        d.addEventListener('click', function(){ goTo(i); });
+        dotsWrap.appendChild(d);
+        dots.push(d);
+      });
+    }
+
+    function update(){
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function(d, i){ d.classList.toggle('active', i === index); });
+    }
+    function goTo(i){ index = (i + count) % count; update(); }
+    function next(){ goTo(index + 1); }
+    function prev(){ goTo(index - 1); }
+
+    var prevBtn = root.querySelector('.carousel-arrow.prev');
+    var nextBtn = root.querySelector('.carousel-arrow.next');
+    if(prevBtn) prevBtn.addEventListener('click', prev);
+    if(nextBtn) nextBtn.addEventListener('click', next);
+
+    var startX = null;
+    root.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+    root.addEventListener('touchend', function(e){
+      if(startX === null) return;
+      var diff = e.changedTouches[0].clientX - startX;
+      if(diff > 40) prev();
+      else if(diff < -40) next();
+      startX = null;
+    });
+
+    if(root.hasAttribute('data-autoplay')){
+      var delay = parseInt(root.getAttribute('data-autoplay'), 10) || 6000;
+      var timer = setInterval(next, delay);
+      root.addEventListener('mouseenter', function(){ clearInterval(timer); });
+      root.addEventListener('mouseleave', function(){ timer = setInterval(next, delay); });
+    }
+    update();
+  }
+  document.querySelectorAll('[data-carousel]').forEach(initCarousel);
+})();
+</script>
 </body>
 </html>
