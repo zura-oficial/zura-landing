@@ -144,6 +144,40 @@
     padding:6px 14px; border-radius:20px; margin-bottom:18px;
   }
 
+  /* ---------- BANNER NUEVOS INGRESOS ---------- */
+  .launch-banner{
+    position:relative; overflow:hidden; padding:0;
+    min-height:560px; display:flex; align-items:center; justify-content:center;
+    background-size:cover; background-position:center 35%;
+    text-align:center;
+  }
+  .launch-overlay{
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(20,18,16,0.55) 0%, rgba(15,14,12,0.85) 100%);
+  }
+  .launch-inner{ position:relative; z-index:2; padding:70px 20px; }
+  .launch-badge{
+    display:inline-flex; align-items:center; gap:6px;
+    background:rgba(244,242,238,0.12); border:1px solid rgba(244,242,238,0.4);
+    color:var(--blanco); font-size:12px; letter-spacing:0.04em; font-weight:500;
+    padding:8px 18px; border-radius:30px; margin-bottom:22px;
+    animation: pulse-fomo 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse-fomo{
+    0%, 100%{ box-shadow:0 0 0 0 rgba(244,242,238,0.25); }
+    50%{ box-shadow:0 0 0 8px rgba(244,242,238,0); }
+  }
+  .launch-inner h2{ font-size:clamp(32px,5vw,52px); }
+  .launch-variants{
+    color:rgba(244,242,238,0.85); font-size:14px; margin-top:20px;
+    max-width:520px; margin-left:auto; margin-right:auto;
+  }
+  .launch-precio{
+    color:var(--blanco); font-size:16px; font-weight:500; margin-top:14px;
+  }
+  .launch-precio span{ color:rgba(244,242,238,0.65); font-weight:400; font-size:13.5px; }
+  .launch-inner .btn{ margin-top:30px; }
+
   /* ---------- SLIDE PROMOCIONAL (DÍA DE LA MADRE) ---------- */
   .mom-slide{ text-align:left; align-items:stretch; }
   .mom-inner{
@@ -468,6 +502,18 @@
   </div>
 </div>
 
+<section id="nuevos-ingresos" class="launch-banner" style="background-image:url('images/nike_mind.jpg');">
+  <div class="launch-overlay"></div>
+  <div class="wrap launch-inner">
+    <div class="launch-badge">🔥 Quedan pocos pares — se agotan rápido</div>
+    <div class="eyebrow" style="color:var(--beige);">Recién llegado</div>
+    <h2 style="color:var(--blanco);">Nike Mind</h2>
+    <p class="launch-variants">Disponible en Negro, Beige y Azul &nbsp;·&nbsp; Talles 36/37, 38/39, 40/41 y 42/43</p>
+    <p class="launch-precio">$80.000 efectivo/transferencia <span>· $103.600 (3 cuotas sin interés)</span></p>
+    <a class="btn" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Mind%2C%20%C2%BFqu%C3%A9%20colores%20y%20talles%20ten%C3%A9s%20disponibles%3F" target="_blank" rel="noopener">Reservar antes de que se agoten</a>
+  </div>
+</section>
+
 <section id="disponible">
   <div class="wrap">
     <div class="sec-head">
@@ -481,76 +527,6 @@
     </div>
 
     <div class="grid">
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img2.jpg" alt="Air Force Rose Gold" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Air Force Rose Gold</h3>
-        <div class="talle">Talles: 38, 39</div>
-        <div class="precios"><span class="ef">$65.000 efectivo/transferencia</span><span class="tj">$84.200 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Air%20Force%20Rose%20Gold" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img3.jpg" alt="Air Force Beige" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Air Force Beige</h3>
-        <div class="talle">Talle: 38</div>
-        <div class="precios"><span class="ef">$59.000 efectivo/transferencia</span><span class="tj">$76.400 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Air%20Force%20Beige" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none; position:relative;"><img src="images/img4.jpg" alt="Air Force Verde" style="width:100%; height:100%; object-fit:cover; filter:grayscale(35%); opacity:0.75;"></div>
-        <h3>Air Force Verde</h3>
-        <div class="talle">Talle: 42</div>
-        <div class="precios"><span class="ef" style="text-decoration:line-through; color:var(--gris);">$91.000 efectivo/transferencia</span><span class="tj">$118.000 (3 cuotas sin interés)</span></div>
-        <span class="btn btn-outline" style="text-align:center; opacity:0.5; cursor:default; pointer-events:none;">Vendido — próximo ingreso por encargue</span>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img5.jpg" alt="Adidas Samba" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Adidas Samba</h3>
-        <div class="talle">Talle: 38</div>
-        <div class="precios"><span class="ef">$64.000 efectivo/transferencia</span><span class="tj">$82.900 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%20Samba" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img6.jpg" alt="Adidas Skin" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Adidas Skin</h3>
-        <div class="talle">Talles: 38, 39</div>
-        <div class="precios"><span class="ef">$65.000 efectivo/transferencia</span><span class="tj">$84.200 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%20Skin" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img7.jpg" alt="Adidas Duramo Spedd" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Adidas Duramo Spedd</h3>
-        <div class="talle">Talle: 37</div>
-        <div class="precios"><span class="ef">$87.300 efectivo/transferencia</span><span class="tj">$113.000 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%20Duramo%20Spedd" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img8.jpg" alt="Puma" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Puma</h3>
-        <div class="talle">Talle: 41</div>
-        <div class="precios"><span class="ef">$71.000 efectivo/transferencia</span><span class="tj">$92.000 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Puma" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img9.jpg" alt="Adidas 2000" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Adidas 2000</h3>
-        <div class="talle">Talle: 41</div>
-        <div class="precios"><span class="ef">$77.500 efectivo/transferencia</span><span class="tj">$100.400 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%202000" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img10.jpg" alt="Vans Hylane" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Vans Hylane</h3>
-        <div class="talle">Talle: 39</div>
-        <div class="precios"><span class="ef">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane%20talle%2039" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/hylane_talle38.jpg" alt="Vans Hylane rosa" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Vans Hylane</h3>
-        <div class="talle">Talle: 38</div>
-        <div class="precios"><span class="ef">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane%20talle%2038" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
       <div class="card">
         <div class="thumb" style="padding:0; background:none;"><img src="images/img11.jpg" alt="Nike Travis Scott" style="width:100%; height:100%; object-fit:cover;"></div>
         <h3>Nike Travis Scott</h3>
@@ -573,18 +549,73 @@
         <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20DC%20Slayer" target="_blank" rel="noopener">Reservar por WhatsApp</a>
       </div>
       <div class="card">
-        <div class="thumb" style="padding:0; background:none;"><img src="images/img14.jpg" alt="Nike Pegasus 39" style="width:100%; height:100%; object-fit:cover;"></div>
-        <h3>Nike Pegasus 39</h3>
-        <div class="talle">Talle: 42</div>
-        <div class="precios"><span class="ef">$60.670 efectivo/transferencia</span><span class="tj">$78.527 (3 cuotas sin interés)</span></div>
-        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Pegasus%2039" target="_blank" rel="noopener">Reservar por WhatsApp</a>
-      </div>
-      <div class="card">
         <div class="thumb" style="padding:0; background:none;"><img src="images/img15.jpg" alt="New Balance" style="width:100%; height:100%; object-fit:cover;"></div>
         <h3>New Balance</h3>
         <div class="talle">Talle: 41</div>
         <div class="precios"><span class="ef">$69.000 efectivo/transferencia</span><span class="tj">$89.400 (3 cuotas sin interés)</span></div>
         <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20New%20Balance" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/v2k_run.jpg" alt="Nike V2K Run" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Nike V2K Run</h3>
+        <div class="talle">Talle: 36/37</div>
+        <div class="precios"><span class="ef">$88.500 efectivo/transferencia</span><span class="tj">$114.600 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20V2K%20Run%20talle%2036/37" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none; position:relative;"><img src="images/img10.jpg" alt="Vans Hylane" style="width:100%; height:100%; object-fit:cover; filter:grayscale(35%); opacity:0.75;"></div>
+        <h3>Vans Hylane</h3>
+        <div class="talle">Talle: 39</div>
+        <div class="precios"><span class="ef" style="text-decoration:line-through; color:var(--gris);">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
+        <span class="btn btn-outline" style="text-align:center; opacity:0.5; cursor:default; pointer-events:none;">Vendido — ingresa por pedido</span>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/hylane_talle38.jpg" alt="Vans Hylane rosa" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Vans Hylane</h3>
+        <div class="talle">Talle: 38</div>
+        <div class="precios"><span class="ef">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane%20talle%2038" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/jordan_high_celeste.jpg" alt="Jordan 1 High crema y celeste" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Jordan 1 High</h3>
+        <div class="talle">Talle: 40</div>
+        <div class="precios"><span class="ef">$92.000 efectivo/transferencia</span><span class="tj">$119.100 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Jordan%201%20High%20crema%20talle%2040" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/jordan_high_bred.jpg" alt="Jordan 1 High roja y negra charol" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Jordan 1 High</h3>
+        <div class="talle">Talle: 40</div>
+        <div class="precios"><span class="ef">$92.000 efectivo/transferencia</span><span class="tj">$119.100 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Jordan%201%20High%20rojo%20y%20negro%20talle%2040" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img5.jpg" alt="Adidas Samba" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Adidas Samba</h3>
+        <div class="talle">Talle: 38</div>
+        <div class="precios"><span class="ef">$64.000 efectivo/transferencia</span><span class="tj">$82.900 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%20Samba" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img6.jpg" alt="Adidas Skin" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Adidas Skin</h3>
+        <div class="talle">Talles: 38, 39</div>
+        <div class="precios"><span class="ef">$65.000 efectivo/transferencia</span><span class="tj">$84.200 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%20Skin" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img7.jpg" alt="Adidas Duramo Spedd" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Adidas Duramo Spedd</h3>
+        <div class="talle">Talle: 37</div>
+        <div class="precios"><span class="ef">$87.300 efectivo/transferencia</span><span class="tj">$113.000 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%20Duramo%20Spedd" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img9.jpg" alt="Adidas 2000" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Adidas 2000</h3>
+        <div class="talle">Talle: 41</div>
+        <div class="precios"><span class="ef">$77.500 efectivo/transferencia</span><span class="tj">$100.400 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%202000" target="_blank" rel="noopener">Reservar por WhatsApp</a>
       </div>
       <div class="card">
         <div class="thumb" style="padding:0; background:none;"><img src="images/img16.jpg" alt="Adidas Adizero Evo" style="width:100%; height:100%; object-fit:cover;"></div>
@@ -594,12 +625,69 @@
         <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Adidas%20Adizero%20Evo" target="_blank" rel="noopener">Reservar por WhatsApp</a>
       </div>
       <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img8.jpg" alt="Puma" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Puma</h3>
+        <div class="talle">Talle: 41</div>
+        <div class="precios"><span class="ef">$71.000 efectivo/transferencia</span><span class="tj">$92.000 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Puma" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img14.jpg" alt="Nike Pegasus 39" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Nike Pegasus 39</h3>
+        <div class="talle">Talle: 42</div>
+        <div class="precios"><span class="ef">$60.670 efectivo/transferencia</span><span class="tj">$78.527 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Pegasus%2039" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
         <div class="thumb" style="padding:0; background:none;"><img src="images/img17.jpg" alt="Nike Air Max DN" style="width:100%; height:100%; object-fit:cover; filter:grayscale(35%); opacity:0.75;"></div>
         <h3>Nike Air Max DN</h3>
         <div class="talle">Talle: 39</div>
         <div class="precios"><span class="ef" style="text-decoration:line-through; color:var(--gris);">$71.500 efectivo/transferencia</span><span class="tj">$92.600 (3 cuotas sin interés)</span></div>
         <span class="btn btn-outline" style="text-align:center; opacity:0.5; cursor:default; pointer-events:none;">Vendido — próximo ingreso por encargue</span>
       </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/pegasus_rosa.jpg" alt="Nike Air Zoom Pegasus rosa" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Nike Air Zoom Pegasus</h3>
+        <div class="talle">Talle: 34</div>
+        <div class="precios"><span class="ef">$68.000 efectivo/transferencia</span><span class="tj">$88.100 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Air%20Zoom%20Pegasus%20talle%2034" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/pegasus_41.jpg" alt="Nike Pegasus 41" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Nike Pegasus 41</h3>
+        <div class="talle">Talle: 41</div>
+        <div class="precios"><span class="ef">$68.000 efectivo/transferencia</span><span class="tj">$88.100 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Pegasus%2041%20talle%2041" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/nike_fit.jpg" alt="Nike Fit" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Nike Fit</h3>
+        <div class="talle">Talle: 36/37</div>
+        <div class="precios"><span class="ef">$68.500 efectivo/transferencia</span><span class="tj">$88.700 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Fit%20talle%2036/37" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img2.jpg" alt="Air Force Rose Gold" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Air Force Rose Gold</h3>
+        <div class="talle">Talles: 38, 39</div>
+        <div class="precios"><span class="ef">$65.000 efectivo/transferencia</span><span class="tj">$84.200 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Air%20Force%20Rose%20Gold" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none;"><img src="images/img3.jpg" alt="Air Force Beige" style="width:100%; height:100%; object-fit:cover;"></div>
+        <h3>Air Force Beige</h3>
+        <div class="talle">Talle: 38</div>
+        <div class="precios"><span class="ef">$59.000 efectivo/transferencia</span><span class="tj">$76.400 (3 cuotas sin interés)</span></div>
+        <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Air%20Force%20Beige" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <div class="thumb" style="padding:0; background:none; position:relative;"><img src="images/img4.jpg" alt="Air Force Verde" style="width:100%; height:100%; object-fit:cover; filter:grayscale(35%); opacity:0.75;"></div>
+        <h3>Air Force Verde</h3>
+        <div class="talle">Talle: 42</div>
+        <div class="precios"><span class="ef" style="text-decoration:line-through; color:var(--gris);">$91.000 efectivo/transferencia</span><span class="tj">$118.000 (3 cuotas sin interés)</span></div>
+        <span class="btn btn-outline" style="text-align:center; opacity:0.5; cursor:default; pointer-events:none;">Vendido — próximo ingreso por encargue</span>
+      </div>
+
     </div>
   </div>
 </section>
