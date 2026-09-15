@@ -145,23 +145,22 @@
   }
 
   /* ---------- BANNER NUEVOS INGRESOS ---------- */
-  .launch-split{
-    background: var(--negro);
-    padding:0;
+  .launch-banner{
+    position:relative; overflow:hidden;
+    min-height:560px; display:flex; align-items:center; justify-content:center;
+    text-align:center; background:#0e0d0c;
   }
-  .launch-inner{
-    display:flex; align-items:center; gap:50px; flex-wrap:wrap;
-    padding:70px 28px;
+  .launch-banner .carousel.launch-carousel{ position:absolute; inset:0; }
+  .launch-carousel .carousel-track{ height:100%; }
+  .launch-carousel .carousel-track > img{
+    width:100%; height:100%;
+    object-fit:contain; background:#0e0d0c;
   }
-  .launch-photo{
-    flex:1 1 320px; max-width:420px;
-    display:flex; align-items:center; justify-content:center;
+  .launch-overlay{
+    position:absolute; inset:0; z-index:1;
+    background: linear-gradient(180deg, rgba(14,13,12,0.35) 0%, rgba(14,13,12,0.82) 100%);
   }
-  .launch-photo img{
-    width:100%; height:auto; display:block;
-    border-radius:var(--radio); box-shadow:0 20px 50px rgba(0,0,0,0.4);
-  }
-  .launch-text{ flex:1 1 380px; max-width:480px; text-align:left; }
+  .launch-inner{ position:relative; z-index:2; padding:70px 20px; }
   .launch-badge{
     display:inline-flex; align-items:center; gap:6px;
     background:rgba(244,242,238,0.12); border:1px solid rgba(244,242,238,0.4);
@@ -173,21 +172,21 @@
     0%, 100%{ box-shadow:0 0 0 0 rgba(244,242,238,0.25); }
     50%{ box-shadow:0 0 0 8px rgba(244,242,238,0); }
   }
-  .launch-text h2{ font-size:clamp(32px,5vw,48px); }
+  .launch-inner h2{ font-size:clamp(32px,5vw,52px); }
   .launch-variants{
-    color:rgba(244,242,238,0.85); font-size:14px; margin-top:20px; max-width:420px;
+    color:rgba(244,242,238,0.85); font-size:14px; margin-top:20px;
+    max-width:520px; margin-left:auto; margin-right:auto;
   }
   .launch-precio{
     color:var(--blanco); font-size:16px; font-weight:500; margin-top:14px;
   }
   .launch-precio span{ color:rgba(244,242,238,0.65); font-weight:400; font-size:13.5px; }
-  .launch-text .btn{ margin-top:30px; }
-  @media (max-width:760px){
-    .launch-inner{ flex-direction:column; text-align:center; padding:50px 24px; }
-    .launch-text{ text-align:center; }
-    .launch-variants{ margin-left:auto; margin-right:auto; }
-    .launch-photo{ max-width:260px; }
+  .launch-inner .btn{ margin-top:30px; }
+  .btn-hot{
+    background:#e24a2f; border-color:#e24a2f; color:#fff; font-weight:700;
+    letter-spacing:0.1em; box-shadow:0 10px 30px rgba(226,74,47,0.4);
   }
+  .btn-hot:hover{ background:#c93c24; border-color:#c93c24; color:#fff; }
 
   /* ---------- SLIDE PROMOCIONAL (DÍA DE LA MADRE) ---------- */
   .mom-slide{ text-align:left; align-items:stretch; }
@@ -513,19 +512,21 @@
   </div>
 </div>
 
-<section id="nuevos-ingresos" class="launch-split">
-  <div class="wrap launch-inner">
-    <div class="launch-photo">
+<section id="nuevos-ingresos" class="launch-banner">
+  <div class="carousel launch-carousel" data-carousel data-autoplay="4500">
+    <div class="carousel-track">
       <img src="images/nike_mind.jpg" alt="Nike Mind">
     </div>
-    <div class="launch-text">
-      <div class="launch-badge">🔥 Quedan pocos pares — se agotan rápido</div>
-      <div class="eyebrow" style="color:var(--beige);">Recién llegado</div>
-      <h2 style="color:var(--blanco);">Nike Mind</h2>
-      <p class="launch-variants">Disponible en Negro, Beige y Azul &nbsp;·&nbsp; Talles 36/37, 38/39, 40/41 y 42/43</p>
-      <p class="launch-precio">$80.000 efectivo/transferencia <span>· $103.600 (3 cuotas sin interés)</span></p>
-      <a class="btn" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Nike%20Mind%2C%20%C2%BFqu%C3%A9%20colores%20y%20talles%20ten%C3%A9s%20disponibles%3F" target="_blank" rel="noopener">Reservar antes de que se agoten</a>
-    </div>
+    <div class="carousel-dots"></div>
+  </div>
+  <div class="launch-overlay"></div>
+  <div class="wrap launch-inner">
+    <div class="launch-badge">🔥 Quedan pocos pares — se agotan rápido</div>
+    <div class="eyebrow" style="color:var(--beige);">Recién llegado</div>
+    <h2 style="color:var(--blanco);">Nike Mind</h2>
+    <p class="launch-variants">Disponible en Negro, Beige y Azul &nbsp;·&nbsp; Talles 36/37, 38/39, 40/41 y 42/43</p>
+    <p class="launch-precio">$80.000 efectivo/transferencia <span>· $103.600 (3 cuotas sin interés)</span></p>
+    <a class="btn btn-hot" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20mis%20Nike%20Mind%2C%20%C2%BFqu%C3%A9%20colores%20y%20talles%20ten%C3%A9s%20disponibles%3F" target="_blank" rel="noopener">QUIERO MIS NIKE MIND</a>
   </div>
 </section>
 
