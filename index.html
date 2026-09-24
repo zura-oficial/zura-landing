@@ -318,6 +318,44 @@
   .card .precios .tj{color:#6f6a63; display:block; margin-top:2px; font-size:11.5px;}
   .card .btn{margin-top:auto; text-align:center; font-size:10.5px; padding:11px 16px;}
 
+  /* ---------- DÍA DE LA MADRE ---------- */
+  .dia-madre{ background: linear-gradient(180deg, #f7f0ec 0%, #f4e8e1 100%); }
+  .dia-madre .eyebrow{ color:#a85d45; }
+  .dia-madre .sec-head h2 .script{ font-family:'Allura', cursive; font-weight:400; font-size:1.15em; color:#a85d45; }
+  .dia-madre .pill{ border-color:rgba(168,93,69,0.25); background:rgba(168,93,69,0.08); color:#7a4433; }
+  .grid-madre{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:2px;
+    background: var(--gris-linea); border:1px solid var(--gris-linea);
+  }
+  @media (max-width:920px){ .grid-madre{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .grid-madre{grid-template-columns:1fr;} }
+  .card-madre{
+    background: var(--blanco); padding:22px 20px 20px;
+    display:flex; flex-direction:column; gap:10px; position:relative;
+    transition: background .25s;
+  }
+  .card-madre:hover{ background:#fffdfc; }
+  .card-madre .thumb{ aspect-ratio:1/1; position:relative; }
+  .card-madre .thumb img{ width:100%; height:100%; object-fit:cover; }
+  .card-madre .thumb .carousel{ position:absolute; inset:0; }
+  .card-madre .thumb .carousel-dots{ bottom:8px; }
+  .card-madre .thumb .carousel-dots button{ width:5px; height:5px; }
+  .card-madre .thumb .carousel-arrow{ width:24px; height:24px; font-size:13px; }
+  .card-madre .thumb .carousel-arrow.prev{ left:6px; }
+  .card-madre .thumb .carousel-arrow.next{ right:6px; }
+  .card-madre .desc-badge{
+    position:absolute; top:14px; left:14px; z-index:2;
+    background:#a85d45; color:var(--blanco); font-size:10.5px; font-weight:600;
+    padding:4px 9px; letter-spacing:0.04em; border-radius:2px;
+  }
+  .card-madre h3{ font-size:15.5px; font-weight:600; margin-top:2px; }
+  .card-madre .talle{ font-size:11px; color:var(--gris); letter-spacing:0.03em; }
+  .card-madre .precios{ font-size:12.5px; margin-top:2px; }
+  .card-madre .precios .orig{ color:var(--gris); text-decoration:line-through; display:block; font-size:11.5px; }
+  .card-madre .precios .desc{ color:#a85d45; font-weight:600; display:block; margin-top:2px; font-size:14px; }
+  .card-madre .btn{ margin-top:auto; text-align:center; font-size:10.5px; padding:11px 16px; background:#a85d45; border-color:#a85d45; }
+  .card-madre .btn:hover{ background:#8f4b37; }
+
   /* ---------- PRE-VENTA (HERO MODELS) ---------- */
   .preventa-bg{ background: var(--negro); color: var(--blanco); }
   .preventa-bg .eyebrow{color: var(--beige);}
@@ -479,7 +517,7 @@
             <h2 class="mom-title">Una selección<br>para <span class="script">ella</span>.</h2>
             <p class="mom-sub">Zapatillas de mujer seleccionadas para regalarle a mamá, con beneficios especiales.</p>
             <div class="mom-btns">
-              <a class="btn" style="background:var(--negro); border-color:var(--negro);" href="#disponible">Ver selección</a>
+              <a class="btn" style="background:var(--negro); border-color:var(--negro);" href="#dia-madre">Ver selección</a>
               <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20el%20cat%C3%A1logo%20completo%20para%20el%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Quiero el catálogo completo</a>
             </div>
             <div class="mom-icons">
@@ -506,6 +544,323 @@
     <a class="btn btn-sm" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20ver%20el%20cat%C3%A1logo%20completo%20de%20ZURA" target="_blank" rel="noopener">Ver catálogo completo</a>
   </div>
 </div>
+
+<section id="dia-madre" class="dia-madre">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">18 de octubre</div>
+      <h2>D&iacute;a de la <span class="script">Madre</span></h2>
+      <p>M&aacute;s de 25 modelos seleccionados con descuentos exclusivos pagando en efectivo o transferencia. Reserv&aacute; con el 30% y te avisamos apenas llega tu par &mdash; ingresos por encargue, demoran de 3 a 5 d&iacute;as h&aacute;biles.</p>
+      <div class="badge-row">
+        <span class="pill">&#127873; Reserv&aacute; con el 30% del valor</span>
+        <span class="pill">&#128230; Env&iacute;os a todo el pa&iacute;s</span>
+      </div>
+    </div>
+
+    <div class="grid-madre">
+      <div class="card-madre">
+        <span class="desc-badge">-18%</span>
+        <div class="thumb"><img src="images/madre_dunk_glitter.jpg" alt="Nike Dunk Glitter"></div>
+        <h3>Nike Dunk Glitter</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$77.600</span><span class="desc">$63.632 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Dunk%20Glitter%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-22%</span>
+        <div class="thumb"><img src="images/madre_dunk_low.jpg" alt="Dunk Low Natural/Gris"></div>
+        <h3>Dunk Low Natural/Gris</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$90.000</span><span class="desc">$70.200 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Dunk%20Low%20Natural/Gris%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-21%</span>
+        <div class="thumb"><img src="images/madre_dunk_bronze.jpg" alt="Nike Dunk Bronze"></div>
+        <h3>Nike Dunk Bronze</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$84.400</span><span class="desc">$66.676 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Dunk%20Bronze%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-21%</span>
+        <div class="thumb"><img src="images/madre_dunk_plata.jpg" alt="Nike Dunk Plata"></div>
+        <h3>Nike Dunk Plata</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$84.400</span><span class="desc">$66.676 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Dunk%20Plata%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-23%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_nb9060_1.jpg" alt="New Balance 9060 color 1">
+              <img src="images/madre_nb9060_2.jpg" alt="New Balance 9060 color 2">
+              <img src="images/madre_nb9060_3.jpg" alt="New Balance 9060 color 3">
+              <img src="images/madre_nb9060_4.jpg" alt="New Balance 9060 color 4">
+              <img src="images/madre_nb9060_5.jpg" alt="New Balance 9060 color 5">
+              <img src="images/madre_nb9060_6.jpg" alt="New Balance 9060 color 6">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>New Balance 9060</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$91.700</span><span class="desc">$70.609 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20New%20Balance%209060%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-12%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_sl72_1.jpg" alt="Adidas SL 72 color 1">
+              <img src="images/madre_sl72_2.jpg" alt="Adidas SL 72 color 2">
+              <img src="images/madre_sl72_3.jpg" alt="Adidas SL 72 color 3">
+              <img src="images/madre_sl72_4.jpg" alt="Adidas SL 72 color 4">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>Adidas SL 72</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$81.000</span><span class="desc">$71.280 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20SL%2072%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-20%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_samba_bordo.jpg" alt="Samba OG Bordó">
+              <img src="images/madre_samba_beige.jpg" alt="Samba OG Beige">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>Samba OG</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$81.000</span><span class="desc">$64.800 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Samba%20OG%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-22%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_adizero_exo_1.jpg" alt="Adidas Adizero Exo color 1">
+              <img src="images/madre_adizero_exo_2.jpg" alt="Adidas Adizero Exo color 2">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>Adidas Adizero Exo</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$85.000</span><span class="desc">$66.300 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Adizero%20Exo%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-16%</span>
+        <div class="thumb"><img src="images/madre_pegasus39.jpg" alt="Nike Pegasus 39"></div>
+        <h3>Nike Pegasus 39</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$71.500</span><span class="desc">$60.060 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Pegasus%2039%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-17%</span>
+        <div class="thumb"><img src="images/madre_structure26.jpg" alt="Nike Structure 26"></div>
+        <h3>Nike Structure 26</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$75.000</span><span class="desc">$62.250 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Structure%2026%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-15%</span>
+        <div class="thumb"><img src="images/madre_zoom_revolution.jpg" alt="Nike Zoom Revolution"></div>
+        <h3>Nike Zoom Revolution</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$70.000</span><span class="desc">$59.500 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Zoom%20Revolution%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-21%</span>
+        <div class="thumb"><img src="images/madre_duramo_speed2.jpg" alt="Adidas Duramo Speed 2"></div>
+        <h3>Adidas Duramo Speed 2</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$85.500</span><span class="desc">$67.545 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Duramo%20Speed%202%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-14%</span>
+        <div class="thumb"><img src="images/madre_duramo_speedv2.jpg" alt="Adidas Duramo Speed V2"></div>
+        <h3>Adidas Duramo Speed V2</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$72.500</span><span class="desc">$62.350 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Duramo%20Speed%20V2%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-14%</span>
+        <div class="thumb"><img src="images/madre_duramo.jpg" alt="Adidas Duramo"></div>
+        <h3>Adidas Duramo</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$72.500</span><span class="desc">$62.350 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Duramo%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-16%</span>
+        <div class="thumb"><img src="images/madre_adizero_novo.jpg" alt="Adidas Adizero Novo"></div>
+        <h3>Adidas Adizero Novo</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$72.500</span><span class="desc">$60.900 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Adizero%20Novo%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-14%</span>
+        <div class="thumb"><img src="images/madre_nike_fit.jpg" alt="Nike Fit"></div>
+        <h3>Nike Fit</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$68.500</span><span class="desc">$58.910 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Fit%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-22%</span>
+        <div class="thumb"><img src="images/madre_pegasus_zoomx.jpg" alt="Nike Zoom X Pegasus Plus"></div>
+        <h3>Nike Zoom X Pegasus Plus</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$85.000</span><span class="desc">$66.300 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Zoom%20X%20Pegasus%20Plus%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-18%</span>
+        <div class="thumb"><img src="images/madre_duramo_celeste.jpg" alt="Adidas Duramo Celeste"></div>
+        <h3>Adidas Duramo Celeste</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$76.300</span><span class="desc">$62.566 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Duramo%20Celeste%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-16%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_air_nk_1.jpg" alt="Nike Air NK color 1">
+              <img src="images/madre_air_nk_2.jpg" alt="Nike Air NK color 2">
+              <img src="images/madre_air_nk_3.jpg" alt="Nike Air NK color 3">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>Nike Air NK</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$71.000</span><span class="desc">$59.640 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Air%20NK%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-15%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_ultrabounce_1.jpg" alt="Adidas Ultrabounce color 1">
+              <img src="images/madre_ultrabounce_2.jpg" alt="Adidas Ultrabounce color 2">
+              <img src="images/madre_ultrabounce_3.jpg" alt="Adidas Ultrabounce color 3">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>Adidas Ultrabounce</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$71.000</span><span class="desc">$60.350 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Ultrabounce%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-12%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_ultraboost_1.jpg" alt="Adidas Ultraboost color 1">
+              <img src="images/madre_ultraboost_2.jpg" alt="Adidas Ultraboost color 2">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>Adidas Ultraboost</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$65.000</span><span class="desc">$57.200 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Ultraboost%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-13%</span>
+        <div class="thumb"><img src="images/madre_pegasus_trail.jpg" alt="Nike Pegasus Trail"></div>
+        <h3>Nike Pegasus Trail</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$68.000</span><span class="desc">$59.160 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20Pegasus%20Trail%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-24%</span>
+        <div class="thumb"><img src="images/madre_adizero_boston.jpg" alt="Adidas Adizero Boston"></div>
+        <h3>Adidas Adizero Boston</h3>
+        <div class="talle">Todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$93.000</span><span class="desc">$70.680 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Adidas%20Adizero%20Boston%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-22%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_v2k_run_1.jpg" alt="Nike V2K Run color 1">
+              <img src="images/madre_v2k_run_2.jpg" alt="Nike V2K Run color 2">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>Nike V2K Run</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$88.500</span><span class="desc">$69.030 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20Nike%20V2K%20Run%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+      <div class="card-madre">
+        <span class="desc-badge">-22%</span>
+        <div class="thumb">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <img src="images/madre_nb530_1.jpg" alt="New Balance 530 V5 color 1">
+              <img src="images/madre_nb530_2.jpg" alt="New Balance 530 V5 color 2">
+              <img src="images/madre_nb530_3.jpg" alt="New Balance 530 V5 color 3">
+              <img src="images/madre_nb530_4.jpg" alt="New Balance 530 V5 color 4">
+            </div>
+            <div class="carousel-dots"></div>
+            <button class="carousel-arrow prev" aria-label="Color anterior">&lsaquo;</button>
+            <button class="carousel-arrow next" aria-label="Siguiente color">&rsaquo;</button>
+          </div>
+        </div>
+        <h3>New Balance 530 V5</h3>
+        <div class="talle">Varios colores &middot; todos los talles &middot; entrega 3 a 5 d&iacute;as h&aacute;biles</div>
+        <div class="precios"><span class="orig">$90.000</span><span class="desc">$70.200 efectivo/transferencia</span></div>
+        <a class="btn" href="https://wa.me/5493487212866?text=Hola%21%20Quiero%20reservar%20el%20New%20Balance%20530%20V5%20con%20el%20descuento%20del%20D%C3%ADa%20de%20la%20Madre" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="nuevos-ingresos" class="launch-banner" style="background-image:url('images/nike_mind.jpg');">
   <div class="launch-overlay"></div>
@@ -585,14 +940,14 @@
         <div class="thumb" style="padding:0; background:none; position:relative;"><img src="images/img10.jpg" alt="Vans Hylane" style="width:100%; height:100%; object-fit:cover; filter:grayscale(35%); opacity:0.75;"></div>
         <h3>Vans Hylane</h3>
         <div class="talle">Talle: 39</div>
-        <div class="precios"><span class="ef" style="text-decoration:line-through; color:var(--gris);">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
+        <div class="precios"><span class="ef" style="text-decoration:line-through; color:var(--gris);">$88.540 efectivo/transferencia</span><span class="tj">$114.700 (3 cuotas sin interés)</span></div>
         <span class="btn btn-outline" style="text-align:center; opacity:0.5; cursor:default; pointer-events:none;">Vendido — ingresa por pedido</span>
       </div>
       <div class="card">
         <div class="thumb" style="padding:0; background:none;"><img src="images/hylane_talle38.jpg" alt="Vans Hylane rosa" style="width:100%; height:100%; object-fit:cover;"></div>
         <h3>Vans Hylane</h3>
         <div class="talle">Talle: 38</div>
-        <div class="precios"><span class="ef">$78.900 efectivo/transferencia</span><span class="tj">$102.200 (3 cuotas sin interés)</span></div>
+        <div class="precios"><span class="ef">$88.540 efectivo/transferencia</span><span class="tj">$114.700 (3 cuotas sin interés)</span></div>
         <a class="btn btn-outline" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane%20talle%2038" target="_blank" rel="noopener">Reservar por WhatsApp</a>
       </div>
       <div class="card">
@@ -785,8 +1140,8 @@
           <h3>Vans Hylane</h3>
           <div class="tag script">el clásico urbano</div>
           <p class="desc">Cuero y gamuza en un diseño bajo, perfecto para el día a día.</p>
-          <div class="precio-line"><span class="ef">$78.900 efectivo/transferencia</span> · $102.200 tarjeta (3 cuotas sin interés)</div>
-          <div class="sena">Reservá con 30% — $23.670</div>
+          <div class="precio-line"><span class="ef">$88.540 efectivo/transferencia</span> · $114.700 tarjeta (3 cuotas sin interés)</div>
+          <div class="sena">Reservá con 30% — $26.562</div>
           <a class="btn" href="https://wa.me/5493487212866?text=Hola!%20Quiero%20reservar%20el%20Vans%20Hylane%2C%20%C2%BFqu%C3%A9%20talles%20ten%C3%A9s%20disponibles%3F" target="_blank" rel="noopener">Reservar mi par</a>
         </div>
       </div>
