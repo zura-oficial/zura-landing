@@ -355,6 +355,18 @@
   .card-madre .precios .desc{ color:#a85d45; font-weight:600; display:block; margin-top:2px; font-size:14px; }
   .card-madre .btn{ margin-top:auto; text-align:center; font-size:10.5px; padding:11px 16px; background:#a85d45; border-color:#a85d45; }
   .card-madre .btn:hover{ background:#8f4b37; }
+  .regalo-llavero{
+    display:flex; align-items:center; gap:28px; flex-wrap:wrap;
+    max-width:760px; margin:0 auto 56px; padding:22px 26px;
+    background:rgba(255,255,255,0.55); border:1px solid rgba(168,93,69,0.2);
+    border-radius:4px; text-align:left;
+  }
+  .regalo-llavero img{
+    width:96px; height:120px; object-fit:cover; border-radius:2px; box-shadow:var(--sombra); flex-shrink:0;
+  }
+  .regalo-llavero h4{ font-size:14.5px; font-weight:600; margin-bottom:6px; color:#7a4433; }
+  .regalo-llavero p{ font-size:12.5px; color:#5c5450; line-height:1.6; max-width:520px; }
+  @media (max-width:600px){ .regalo-llavero{ flex-direction:column; text-align:center; } .regalo-llavero p{ max-width:100%; } }
 
   /* ---------- PRE-VENTA (HERO MODELS) ---------- */
   .preventa-bg{ background: var(--negro); color: var(--blanco); }
@@ -554,6 +566,15 @@
       <div class="badge-row">
         <span class="pill">&#127873; Reserv&aacute; con el 30% del valor</span>
         <span class="pill">&#128230; Env&iacute;os a todo el pa&iacute;s</span>
+        <span class="pill">&#127873; Llavero personalizado de regalo</span>
+      </div>
+    </div>
+
+    <div class="regalo-llavero">
+      <img src="images/madre_llavero.jpg" alt="Llavero personalizado de regalo">
+      <div>
+        <h4>Cada par viene con un llavero personalizado de regalo &#127873;</h4>
+        <p>Al reservar tu par, nos mand&aacute;s por WhatsApp la foto que quer&eacute;s en el llavero y te lo personalizamos sin cargo &mdash; el regalo perfecto para acompa&ntilde;ar el detalle del D&iacute;a de la Madre.</p>
       </div>
     </div>
 
